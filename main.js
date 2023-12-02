@@ -113,7 +113,7 @@ class Game {
   updateBar(number) {
     const attempt = document.createElement("p");
     attempt.append(`${number !== this.targetNumber ? "❌" : "🟢"}`);
-    attempt.classList.add("absolute", "min-w-min");
+    attempt.classList.add("absolute");
 
     this.attempts.appendChild(attempt);
     attempt.style.left = `${
