@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+    <link rel="icon" href="/guess-emoji.png" />
+  </head>
+  <body class="flex flex-col min-h-screen m-0">
+    <div id="app">
+      <h1
+        class="text-6xl uppercase break-words font-mono font-extrabold text-center mx-10 my-10"
+      >
+        Guess the number
+      </h1>
+      <div id="welcome" class="mx-10 flex-col">
+        <p class="text-base font-mono font-normal py-6">
+          The application will generate a random number, and your goal is to
+          figure it out with as few attempts as you can.
+        </p>
+        <button
+          id="start"
+          class="h-10 w-20 rounded-md text-sm font-medium ring-offset-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-neutral-900 text-neutral-50 hover:bg-neutral-900/90"
+        >
+          Start
+        </button>
+      </div>
+
+      <div id="game" class="flex flex-col mx-10 hidden">
+        <p class="text-base font-mono font-normal py-6">
+          I picked a number between 0 and 500, see if you can figure it out! 😆
+        </p>
+        <p id="score" class="text-base font-mono font-normal py-6 text-end">
+          Score: 0
+        </p>
+        <form id="form" class="flex flex-col font-mono font-normal">
+          <label class="text-base font-mono font-normal py-2" for="number"
+            >Your guess:</label
+          >
+          <div class="flex">
+            <input
+              class="flex mr-2 h-10 w-full rounded-md border border-neutral-400 bg-neutral-50 px-3 py-2 text-sm ring-offset-neutral-50 placeholder:text-neutral-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              type="text"
+              id="number"
+              name="number"
+              placeholder="55"
+            />
+            <button
+              type="submit"
+              class="h-10 w-20 rounded-md text-sm font-medium ring-offset-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-neutral-900 text-neutral-50 hover:bg-neutral-900/90"
+            >
+              Submit
+            </button>
+          </div>
+          <label
+            class="font-mono font-thin text-sm text-gray-500 italic"
+            for="number"
+            id="warning"
+            >Enter your guessing number between 0 and 500</label
+          >
+        </form>
+        <p id="answer" class="text-base font-mono font-normal py-6 invisible">
+          Invisible text
+        </p>
+        <div class="flex flex-col">
+          <div
+            id="bar"
+            class="mt-10 border border-black h-7 w-full relative"
+          ></div>
+          <div class="flex">
+            <p class="font-mono font-thin text-gray-500">0</p>
+            <p class="font-mono font-thin text-gray-500 ml-auto">500</p>
+          </div>
+        </div>
+        <button
+          id="replay"
+          class="hidden mt-5 mx-auto justify-center h-10 w-20 rounded-md text-sm font-medium ring-offset-neutral-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-800 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-neutral-900 text-neutral-50 hover:bg-neutral-900/90"
+        >
+          Replay
+        </button>
+      </div>
+    </div>
+    <footer class="mt-auto p-10 text-center">
+      <a
+        class="flex items-center justify-center text-center"
+        href="https://github.com/grosclara"
+      >
+        <img
+          class="w-8 h-8 rounded-full mx-2"
+          src="/github-logo.png"
+          alt="Github logo"
+        />
+        <p
+          class="text-base font-mono font-normal pt-6 text-center text-gray-500 mb-6"
+        >
+          Built by Clara Gros
+        </p>
+      </a>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
