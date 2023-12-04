@@ -8,19 +8,19 @@
   </head>
   <body class="h-screen">
 
-    <div class="container h-screen flex flex-col m-auto">
+    <div class="container flex flex-col h-screen m-auto">
       <h1
-        class="text-6xl font-extrabold text-center pt-5"
+        class="pt-5 text-6xl font-extrabold text-center"
         style="font-family: Raleway"
       >
         GUESS THE NUMBER 🤔
       </h1>
 
-      <div class="h-screen flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center h-screen">
        
         <div
           id="start-container"
-          class="flex flex-grow flex-col gap-4 justify-center items-start max-w-md"
+          class="flex flex-col items-start justify-center flex-grow max-w-md gap-4"
         >
           <p style="font-family: Raleway">
             The application will generate a random number, and your goal is to
@@ -31,7 +31,7 @@
 
       <div
         id="game-container"
-        class="flex-grow flex flex-col gap-4 justify-center hidden"
+        class="flex flex-col justify-center flex-grow hidden gap-4"
       >
         <p>
           I picked a number between 0 and 500, see if you can figure it out! 😆
@@ -49,7 +49,7 @@
         <div class="flex flex-col gap-0.5">
           <div
             id="attempts"
-            class="flex flex-row items-center h-9 border border-neutral-400 rounded-md relative"
+            class="relative border rounded-md h-9 border-neutral-400"
           >
           </div>
           <div class="flex justify-between">
@@ -62,7 +62,7 @@
 
       <a class = "flex flex-row max-w-md pb-5" href="https://github.com/grosclara">
         <img
-          class="w-8 h-8 rounded-full mx-2"
+          class="w-8 h-8 mx-2 rounded-full"
           src="/github-logo.png"
           alt="Github logo"
         />
